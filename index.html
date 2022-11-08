@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="flex justify-center items-center bg-gradient-to-r from-blue-50 to-red-50">
+    <div class="max-w-4xl py-10 px-2">
+        <form>
+            <fieldset>
+              <legend class="my-10 text-xl font-medium">Calculator impozit Micro/an (2023)</legend>
+              
+              <div class="inputs-wrapper m-auto md:flex items-center flex-row gap-5 bg-white border border-zinc p-5 rounded-md mb-10">
+                <div class="">
+                <label for="venit-total">Venit total/an</label>                    
+                <input class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 mb-5 text-lg font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" type="number" id="venit-total" name="venit-total" placeholder="0 lei">
+              </div>
+              <div class="">
+                <label for="cheltuieli">Cheltuieli/an</label>
+                <input class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 mb-5 text-lg font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" type="number" id="cheltuieli" name="cheltuieli" placeholder="0 lei">
+              </div>
+                <div class="">
+                <label for="numar-angajati">Număr de angajați</label>
+                <input class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 mb-5 text-lg font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" type="number" id="numar-angajati" name="numar-angajati" placeholder="0">
+              </div>  
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Calculează</button>
+            </div>
+          </fieldset>
+        </form>
+            
+        <div class="results-wrapper max-w-4xl bg-zinc-50/50 border border-zinc p-5 rounded-md mb-20">
+          <div class="results-wrapper max-w-md">
+            <div class="taxes-wrapper divide-y divide-x divide-dashed">
+              <div class="taxes-header text-lg">TAXE</div>
+              <div class="flex justify-between p-2 bg-red-50/75 mt-5">
+                <div>Total taxe angajați/an</div>
+                <div class="" id="taxe-angajati" >0 lei</div>
+              </div>
+              <div class="flex justify-between p-2 bg-red-50/75">
+                <div >Impozit profit/an <span class="text-xs"></span>(1% din Profit)</span></div>
+                <div class="" id="impozit-profit">0 lei</div>
+              </div>
+              <div class="flex justify-between p-2 bg-red-50/75">
+                <div>Total taxe angajați + Impozit profit </div>
+                <div class="" id="taxe">0 lei</div>
+              </div>
+              <div class="flex justify-between p-2 bg-red-50/75">
+                <div>Impozit dividende <span class="text-xs">(8% din Dividende)</span></div>
+                <div class="" id="impozit-dividende">0 lei</div>
+              </div>
+              <div class="flex justify-between p-2 bg-red-50/75">
+                <div>Total Taxe <span class="text-xs">(taxe salariu + impozit venit + impozit dividende)</span> </div>
+                <div class="" id="total-taxe">0 lei</div>
+              </div>
+              <div class="flex justify-between p-2 bg-red-50/75">
+                <div>Procentul plătit la stat din Venitul total </div>
+                <div class="" id="procent-total-taxe">0%</div>
+                </div>
+              </div>
+
+              <div class="profit-wrapper divide-y divide-x divide-dashed">
+                <div class="profit-header mt-5 text-lg">PROFIT</div>
+                <div class="flex justify-between p-2 mt-5 bg-green-50">
+                  <div>Profit <span class="text-xs">(cifra de afaceri minus cheltuieli)</span></div>
+                  <div class="" id="profit">0 lei</div>
+                </div>
+                <div class="flex justify-between p-2 bg-green-50">
+                  <div>Dividende, (impozabile) după plata taxelor</div>
+                  <div class="" id="dividende-neimpozitate">0 lei</div>
+                </div>
+                <div class="flex justify-between p-2 bg-green-50">
+                  <div>DIVIDENDE <span class="text-xs">(banii tăi)</span></div>
+                  <div class="" id="dividende">0 lei</div>
+                </div>
+              </div>
+            </div>
+        </div>  
+    </div>
+</main>
+</body>
+</html>
